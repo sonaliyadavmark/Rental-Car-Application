@@ -1,0 +1,46 @@
+{
+  "Car": [
+    {
+      "id": "24a5",
+      "carId": 0,
+      "carName": "Tata Nexon",
+      "ratePerHour": 500,
+      "ratePerDay": 5000,
+      "carImage": "https://cdni.autocarindia.com/utils/imageresizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/Hyundai-Creta-180120241405.jpg&w=872&h=578&q=75&c"
+    },
+    {
+      "id": "d676",
+      "carId": 0,
+      "carName": "Tata Punch",
+      "ratePerHour": 300,
+      "ratePerDay": 3000,
+      "carImage": "https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcar-images%2Fcolors%2Ftata%2Fnexon%2Ftata-nexon-pristine-white.jpg%3Fv%3D1695383712&w=750&q=75"
+    }
+  ],
+  "Bookings": [
+    {
+      "id": "75c9",
+      "bookingId": 0,
+      "customerName": "sonali",
+      "mobileNo": 0,
+      "carId": "Tata Nexon",
+      "carName": "",
+      "bookingDate": "2024-06-08T07:25:13.140Z",
+      "rentType": "",
+      "rentDuration": 0,
+      "noOfCars": 0
+    },
+    {
+      "id": "a192",
+      "bookingId": 0,
+      "customerName": "shrii",
+      "mobileNo": 7864545,
+      "carId": 0,
+      "carName": "Tata Punch",
+      "bookingDate": "2024-06-08T07:27:21.129Z",
+      "rentType": "",
+      "rentDuration": 0,
+      "noOfCars": 0
+    }
+  ]
+}

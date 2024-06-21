@@ -1,0 +1,10 @@
+.navbar-nav{
+    background: gray;
+    width: 100%;
+
+}
+.nav-item{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+}

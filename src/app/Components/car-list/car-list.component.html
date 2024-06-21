@@ -1,0 +1,87 @@
+<div class="row">
+    <div [className]="isSidePanelVisible ? 'col-8':'col-12' ">
+        <div class="card">
+            <div class="card-header bg-success">
+                <div class="row">
+                    <div class="col-6">
+                        Car List
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary" (click)="isSidePanelVisible=true">Add New</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>Car Id</th>
+                            <th>Car Name</th>
+                            <th>Per Hr Rate</th>
+                            <th>Per Day Rate</th>
+                            <th>Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let c of carDetails; let carId=index">
+                            <td >{{carId+1}}</td>
+                            <td>{{c.carName}}</td>
+                            <td>{{c.ratePerHour}}</td>
+                            <td>{{c.ratePerDay}}</td>
+                            <td><img [src]="c.carImage" style="width: 50px; height: 50px;"></td>
+                            <td>
+                                <button class="btn btn-danger" name="data" (click)="onDeleteCar(c.id)">DELETE</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4" *ngIf="isSidePanelVisible">
+        <div class="card">
+            <div class="card-header bg-success">
+                <div class="row">
+                    <div class="col-6">
+                        New Car
+                    </div>
+                    
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary" (click)="isSidePanelVisible=false" >Closed</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">Car Name</label>
+                        <input type="text" name="carName" [(ngModel)]="carData.carName" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Rate Per Hr</label>
+                        <input type="number" name="ratePerHour" [(ngModel)]="carData.ratePerHour" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Rate per Day</label>
+                        <input type="number"  name="ratePerDay" [(ngModel)]="carData.ratePerDay" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Car Image Url</label>
+                        <input type="text" name="carImage" [(ngModel)]="carData.carImage" class="form-control">
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-6 text-center">
+                        <button class="btn btn-secondary" (click)="onReset()">Reset</button>
+                    </div>
+                    <div class="col-6 text-center">
+                        <button class="btn btn-success" name="data" (click)="onSaveCar(carData)">Save</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
